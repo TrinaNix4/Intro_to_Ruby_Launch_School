@@ -60,3 +60,23 @@ Methods denoted by :: are considered class methods
 Methods denoted by # are considered instance methods
 
 - Use in Ruby documentation is different from their use in actual code
+
+# Instance method
+
+look at the string "world wide web" and directly apply instance methods to it
+
+e.g. look at the method list sidebar and see there is a #split method for strings, which means that split is an instance method, and we can call that method on any string directly:
+
+```
+irb :001 > "world wide web".split
+ => ["world", "wide", "web"]
+```
+
+further, we can see from the methods sidebar there are to class methods: ::new and ::try_convert. Public Class Methods are called directly from the class
+
+```
+irb :001 > b = String.new("blue")
+ => "blue"
+irb :002 > String.try_convert("red")
+ => "red"
+```
