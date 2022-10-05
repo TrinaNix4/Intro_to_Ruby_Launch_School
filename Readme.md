@@ -45,3 +45,16 @@ end
 
 class MySecondClass
 end
+
+# Class name or Module name
+
+:: symbol is used to define a namespace, which is a way to group classes in Ruby and differentiate from other classes with the same name. E.g. ActiveRecord::Base is referring to the ‘Base’ class in the “ActiveRecord” module, to differentiate from other classes also named ‘Base’.
+
+When looking at the method list, :: means something different. It means the method after the :: is a class method
+
+# Methods
+
+Methods denoted by :: are considered class methods
+Methods denoted by # are considered instance methods
+
+- Use in Ruby documentation is different from their use in actual code
