@@ -61,7 +61,7 @@ Methods denoted by # are considered instance methods
 
 - Use in Ruby documentation is different from their use in actual code
 
-# Instance method
+# Instance method/Class method
 
 look at the string "world wide web" and directly apply instance methods to it
 
