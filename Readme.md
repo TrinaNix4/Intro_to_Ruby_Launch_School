@@ -304,3 +304,19 @@ a hash is a set of key-value pairs. hash literals are represented with curly bra
 ```
 
 can have mutiple items in a hash if we separate them with commas, but they will not necessarily be in any order.
+
+# Puts vs return
+
+when we call the puts method we are telling ruby to print something to the screen. however, puts does not return what is printed to the screen.
+
+expressions \*do something but they also return something
+
+e.g.
+
+```
+puts 'stuff'
+stuff
+=> nil
+```
+
+stuff was printed to the console and then a nil, which is rubys way of saying nothing was returned.
