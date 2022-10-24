@@ -113,3 +113,16 @@ if you'd like to include single quotes within your string then 2 options: either
 the backslash or escape character (\) tells the computer that the quotes that follow are not meant as ruby syntax but only as simple quote characters to be used in the string
 
 double quotes allow for # string interpolation
+
+# Symbols
+
+symbols are created by placing a colon ( : ) before a word
+
+```
+# Examples of symbols
+:name
+:a_symbol
+:"surprisingly, this is also a symbol"
+```
+
+a symbol is used when you want to reference something like a string but dont ever intend to print it to the screen or change it. referrred to as an immutabble (i.e. unchangeable) string.
