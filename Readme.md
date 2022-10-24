@@ -80,3 +80,36 @@ irb :001 > b = String.new("blue")
 irb :002 > String.try_convert("red")
  => "red"
 ```
+
+# Literals
+
+any notation that lets you represent a fixed value in source code
+
+```
+'Hello, world!'          // string literal
+375                      // integer literal
+3.141528                 // float literal
+true                     // boolean literal
+{ 'a' => 1, 'b' => 2 }   // hash literal
+[ 1, 2, 3 ]              // array literal
+:sym                     // symbol literal
+nil                      // nil literal
+```
+
+# Strings
+
+a list of characters in a specific sequence. in programming, we often work with text data like names, messages, and descriptions. Ruby uses strings to represent such data. string literals are written with either single quotes ('hi there') or double quotes ("hi there"). both create a strings but there are subtle differences:
+
+if you'd like to include single quotes within your string then 2 options: either use the double quote method or the single quote without escaping
+
+```
+# Ex. 1: with double quotes
+"The man said, 'Hi there!'"
+
+# Ex 2: with single quotes and escaping
+'The man said, \'Hi there!\''
+```
+
+the backslash or escape character (\) tells the computer that the quotes that follow are not meant as ruby syntax but only as simple quote characters to be used in the string
+
+double quotes allow for # string interpolation
