@@ -285,3 +285,22 @@ can be called on any string
 ```
 
 this returns an integer.
+
+# Basic Data Structures
+
+- arrays - used to organize info into an ordered list; can be made up of strings, floats, integers, or any other data type.
+- an array literal is denoted by square brackets [ ].
+
+each element in an array can be accessed via an index. index is numbered starting at zero.
+
+# Hashes
+
+a hash is a set of key-value pairs. hash literals are represented with curly braces { }. a key-value pair is an association where a key is assigned a specific value; a hash consists of a key, usually represented by a symbol, that points to a value (denoted using a =>).
+
+```
+{:dog => 'barks'}
+=> {:dog => 'barks'}
+
+```
+
+can have mutiple items in a hash if we separate them with commas, but they will not necessarily be in any order.
