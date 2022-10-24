@@ -1,2 +1,4 @@
-let pot = "potato".includes("pot");
-return pot;
+Firstname = "Trina"
+Lastname  = "Nixon"
+
+puts "Hello, my name is #{Firstname} #{Lastname}." 
