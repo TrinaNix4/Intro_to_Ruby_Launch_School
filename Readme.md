@@ -202,3 +202,57 @@ false == nil
 => false
 
 ```
+
+# Operations
+
+- adding, subtracting, and multiplying integers
+
++, -, \*
+
+- division vs modulo
+
+divide integers with the / operator
+
+modulo operator - represented by the % symbol. can be referred to a the remainder operator, but this is not strictly correct.
+
+in modulo expressions, the value to the left of the % is called the divident, and the value to the right is called the modulus
+
+the modulo operator returns the remainder of a division operation
+
+```
+16 % 4
+=> 0
+
+16 % 5
+=> 1
+
+15 / 4
+=> 3
+
+```
+
+when dividing integers, you will only receive an integer in return. if we want more precision we need to use floats.
+
+the #remainder method computes and returns the remainder of an integer division operation:
+
+```
+16.remainder(5)
+=> 1
+```
+
+#divmod method that computes both the integer result of the division and its modulo value
+
+```
+16.divmod(5)
+=> [3, 1]
+
+```
+
+subtle but important difference between modulo and remainder operations
+
+- modulo operations return a positive integer when the second operand is positive, and a negative integer when the second operand is negative
+- remainder operations return a positive integer when the first operand is positive, and a negative integer when the first operand is negative
+
+when working with positive integers, we don't need to worry about whether we should use the modulo or remainder method; the return value is postive either way
+
+but if either number is negative, it's not so simple. if you can't work with positive numbers then make sure to know exactly which operator or method you need to use
