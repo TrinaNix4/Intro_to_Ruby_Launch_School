@@ -126,3 +126,79 @@ symbols are created by placing a colon ( : ) before a word
 ```
 
 a symbol is used when you want to reference something like a string but dont ever intend to print it to the screen or change it. referrred to as an immutabble (i.e. unchangeable) string.
+
+# Numbers
+
+most basic form of numbers is called an integer. represented by a whole number only, no decimal point
+
+float - is a number that contains a decimal
+
+```
+# Example of integer literals
+1, 2, 3, 50, 10, 4345098098
+
+# Example of float literals
+1.2345, 2345.4267, 98.2234
+```
+
+# nil
+
+we need a way to express "nothing" and in Ruby we do this with nil. a variable with a value of nil could be described as having 'nothing' or being 'completely empty', or even just simply 'not any specific type'.
+an example of this may be where an output is expected but none is returned:
+
+```
+irb(main):001:0> puts "hello world!"
+hello world!
+=> nil
+
+```
+
+the puts method prints out a string and returns nothing, so we see 'nil' being returned after the string is displayed
+
+you can explicitly refer to the nil value by using the nil literal in the code:
+
+```
+x = nil  #nil literal used here
+=> nil
+
+```
+
+check if something is a nil y using .nil?
+
+```
+"hello world!".nil?
+=> false
+```
+
+an important property of the nil type is that when used in an expression, such as an if statement, it will be treated as false, as it represents an absence of content
+
+```
+if nil
+puts "hello world"
+end
+=> nil
+
+```
+
+the return value (as shown by hash rocket =>) is nil, and the code contained within the if is not run, as nil is interpreted as being a false condition. instead, do the following:
+
+```
+if 1
+puts "hello world"
+end
+hello world
+=> nil
+
+```
+
+since 1 is not "nothing" or a false value, the code within the 'if' is run and we see the output.
+
+- nil can be used within a conditional statement, and will be treated as false
+
+- caveat - both false and nil are treated as negative when evaluated in an expression, but they are not equivalent
+
+```
+false == nil
+=> false
+
+```
