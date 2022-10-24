@@ -256,3 +256,32 @@ subtle but important difference between modulo and remainder operations
 when working with positive integers, we don't need to worry about whether we should use the modulo or remainder method; the return value is postive either way
 
 but if either number is negative, it's not so simple. if you can't work with positive numbers then make sure to know exactly which operator or method you need to use
+
+# String Concatenation
+
+when you use the + operator to join 2 strings together
+
+```
+'foo' + 'foo'
+=> "foofoo"
+
+'foo' + 'bar'
+=> foobar
+
+```
+
+- cannot add a string and a number together; no implicit conversion of Integer into String
+
+# Type Conversion
+
+suppose we have a user input of '12', which is a string, but we want to increment this by 2. we can't do '12' + 2.
+
+method that will convert a string to an integer, called to_i.  
+can be called on any string
+
+```
+'12'.to_i
+=> 12
+```
+
+this returns an integer.
