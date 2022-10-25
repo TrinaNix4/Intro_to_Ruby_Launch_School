@@ -320,3 +320,29 @@ stuff
 ```
 
 stuff was printed to the console and then a nil, which is rubys way of saying nothing was returned.
+
+# Variables
+
+- what is a variable?
+  used to store info to be referenced and manipulated in a computer program
+
+also provide a way of labeling data with a descriptive name so the programs can be better understood by ourselves or users
+
+- sole purpose is to label and store data in memory
+
+# Getting Data from a User
+
+- gets method;
+  stands for "get string"
+  when used:
+  the program waits for the user to 1) type in information 2) press the enter key
+
+  ```
+  name = gets.chomp Bob
+  => "Bob"
+
+  ```
+
+* chomp chained to gets to remove the carriage return characters at the end of the string
+
+# Variable Scope
