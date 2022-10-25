@@ -365,3 +365,64 @@ def print_full_name(first_name, last_name)
   puts name
 end
 ```
+
+once method is defined we can call it as many times as we need with different values
+
+```
+
+name = 'Somebody Else'
+
+def print_full_name(first_name, last_name)
+  name = first_name + ' ' + last_name
+  puts name
+end
+
+print_full_name 'Peter', 'Henry'   # prints Peter Henry
+print_full_name 'Lynn', 'Blake'    # prints Lynn Blake
+print_full_name 'Kim', 'Johansson' # prints Kim Johansson
+puts name                          # prints Somebody Else
+
+```
+
+- methods have self contained scope. means only variables initialized within the methods body can be referenced or modified from within the methods body
+
+- variables initialized inside a methods body are not available outside the methods body
+
+# Variable scope and blocks
+
+block is a piece of code that follows a methods invocation, delimited by curly braces or do/end
+
+the code inside a block can access and modify variables that are defined outside of the block, but any variables initialized inside the block can't be accessed by outer code
+
+- inner scope can access variables initialized in an outer scope but not vice versa
+
+```
+# scope.rb
+
+a = 5             # variable is initialized in the outer scope
+
+3.times do |n|    # method invocation with a block
+  a = 3           # is a accessible here, in an inner scope?
+end
+
+puts a
+
+```
+
+the value of a is 3 because a is available to the inner scope created by 3.times do...end, which allowed the code to re-assign the value of a. reassigned it 3 times to 3.
+
+```
+# scope.rb
+
+a = 5
+
+3.times do |n|    # method invocation with a block
+  a = 3
+  b = 5           # b is initialized in the inner scope
+end
+
+puts a
+puts b            # is b accessible here, in the outer scope?
+```
+
+get an error because b is not available outside of the method invocation with a block where it is initialized. when we call puts b..it is not available within that outer scope
