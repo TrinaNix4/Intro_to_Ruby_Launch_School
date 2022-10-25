@@ -346,3 +346,22 @@ also provide a way of labeling data with a descriptive name so the programs can 
 * chomp chained to gets to remove the carriage return characters at the end of the string
 
 # Variable Scope
+
+a variables scope determines where in the program a variable is available for use
+
+defined by where the variable is initialized or created
+
+in ruby, variable scope is defined by a method definition or by a block
+
+# Variable scope and method definitions
+
+methods are pieces of reuseable code that your program can execute many times during its run
+
+```
+name = 'Somebody Else'
+
+def print_full_name(first_name, last_name)
+  name = first_name + ' ' + last_name
+  puts name
+end
+```
