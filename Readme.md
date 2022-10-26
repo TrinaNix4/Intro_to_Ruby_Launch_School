@@ -426,3 +426,49 @@ puts b            # is b accessible here, in the outer scope?
 ```
 
 get an error because b is not available outside of the method invocation with a block where it is initialized. when we call puts b..it is not available within that outer scope
+
+# Types of variables
+
+5 types of variables - constants, global variables, class variables, instance variables, and local variables.
+
+constants - declared by capitalizing every letter in the variables name;
+used for storing data that never needs to change
+constants cannot be declared in method definitions, and are available throughout the apps scopes
+
+- global variables - declared by starting the variable name with a dollar sign ($)
+  available throughout the entire app, overiding all scope boundaries;
+  can cause complications do rarely used
+
+  ```
+  $var = 'I am also available throughout your app.'
+  ```
+
+* class variables
+
+- declared by starting the variable name with two @ symbols.
+- accessible by instances of your class, as well as the class itself
+- when you need to declare a variable that is related to a class, but each instance of that class does not need its ownvalue for this variable, use a class variable
+
+must be initialized at the class level, outside any method definitions
+
+```
+@@instances = 0
+
+```
+
+- instance variables are declared by starting the variable name with one @ sign.
+  -available throughout the current instance of the parent class
+- can cross some scope boundaries but not all of them
+
+```
+@var = 'I am available throughout the current instance of this class.'
+
+```
+
+- local variables are most common and obey all scope boundaries;
+
+```
+var = 'I must be passed around to cross scope boundaries.'
+```
+
+not all variables are created equal and the scope in which a variable is defined changes its availability throughout the program.
