@@ -472,3 +472,42 @@ var = 'I must be passed around to cross scope boundaries.'
 ```
 
 not all variables are created equal and the scope in which a variable is defined changes its availability throughout the program.
+
+# Methods
+
+define a method using def/end
+
+```
+def say
+  # method body goes here
+end
+```
+
+we call(or invoke) the method by typing its name and passing in arguments.
+
+parameter (say(words)) - parameters are used when you have data outside of a method's scope, but you need access to it within the method definition
+
+arguments - pieces of info that are sent to a method invocation to be modified or used to return a specific result
+
+we "pass" arguments to a method when we call it
+
+```
+def say(words)
+  puts words
+end
+
+say("hello")
+say("hi")
+say("how are you")
+say("I'm fine")
+```
+
+notice there's a (words) after 'say' in the method definition. this is the parameter
+
+we pass arguments to a method when we call it;
+
+we pass the word, or string of words, that we want to use in the 'say' method definition
+
+when we pass those words into the method definition, they're assigned to the local variable 'words' and we can use them however we please from within the method definition
+
+the 'words' local variable is scoped at the method definition level; cannot reference this local variable outside of the 'say' method definition
