@@ -1,2 +1,10 @@
+puts "what is your name?"
 
-def factorial
+name = gets.chomp 
+
+puts "Hello, " + name 
+10.times do 
+  puts name
+end  
+
+
