@@ -633,3 +633,39 @@ p "Before no_mutate method: #{a}"
 no_mutate(a)
 p "After no_mutate method: #{a}"
 ```
+
+results in the same output before and after the method invocation, so we know 'a' was not modified in any way; this is because the 'last' method does not mutate the caller
+
+# puts vs return: the Sequel
+
+difference between 'puts' and 'return'
+
+```
+def add_three(number)
+  number + 3
+end
+
+returned_value = add_three(4)
+puts returned_value
+```
+
+we are assigning the returned_value to the value returned by the add_three method.
+
+then we print returned_value to the output to see what is has inside it
+
+output is 7 because that's what the method call returned
+
+- ruby methods ALWAYS return the evaluated result of the last line of the expression unless an explicit return comes before it
+
+an example of an explicit return added
+
+```
+def add_three(number)
+  return number + 3
+end
+
+returned_value = add_three(4)
+puts returned_value
+```
+
+- Main point - in Ruby, the 'return' reserved words is not required in order to return something from a method
