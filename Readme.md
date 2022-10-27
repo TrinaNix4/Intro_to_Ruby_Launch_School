@@ -566,3 +566,39 @@ end
 ```
 
 # obj.method or method(obj)
+
+- 2 ways to call methods.
+
+  1. - some_method(obj); obj is the argument being passed to 'some_method' method
+
+  2. method called with an explicit caller, like a caller.some_method(obj)
+
+  # Mutating the Caller
+
+  when calling a method and the argument is mutated permanently;
+
+  recall that method parameters are scoped at the method definition level
+
+  ```
+  def some_method(number)
+  number = 7 # this is implicitly returned by the method
+  end
+  ```
+
+a = 5
+some_method(a)
+puts a
+
+```
+- we passed a to the 'some_method' method.
+
+- in 'some_method', the value of a is assigned to the local variable 'number', which is scoped at the method definition level
+
+- 'number' is reassigned the value of "7"
+
+did this affect a's value?  no, because 'number' is scoped at the method definition level and 'a''s value is unchanged
+
+- method definitions cannot modify arguments passed in to them permanently.
+
+
+```
