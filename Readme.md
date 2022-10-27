@@ -703,8 +703,6 @@ new_value = n + 3
 puts new_value
 new_value
 end
+```
 
 - could also use 'return new_value' but since new_value is the last expression in the method definition, it's being implicitly returned
-
-
-```
