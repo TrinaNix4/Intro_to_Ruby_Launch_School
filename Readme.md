@@ -526,3 +526,43 @@ say("hi")
 say("how are you")
 say("I'm fine")
 ```
+
+- parentheses when calling methods can be left off if preferred
+
+# Method definition and local variable scope
+
+a method definition creates its own scope outside the regular flow of execution
+
+- local variables within a method definition cannot be referenced from outside of the method definition;
+
+```
+a = 5
+
+def some_method
+  a = 3
+end
+
+puts a
+```
+
+the value of a is still 5 because method definitions create their own scope that is entirely outside of the execution flow
+
+- dont' confuse method invocation with a block and method definition
+
+```
+# Method invocation with a block
+
+[1, 2, 3].each do |num|
+  puts num
+end
+```
+
+```
+# Method definition
+
+def print_num(num)
+  puts num
+end
+```
+
+# obj.method or method(obj)
