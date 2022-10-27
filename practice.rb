@@ -1,7 +1,10 @@
-def some_method(number)
-  number = 7 # this is implicitly returned by the method
+a = [1, 2, 3]
+
+# Example of a method definition that mutates its argument permanently
+def mutate(array)
+  array.pop
 end
 
-a = 5
-some_method(a)
-puts a
+p "Before mutate method: #{a}"
+mutate(a)
+p "After mutate method: #{a}"
