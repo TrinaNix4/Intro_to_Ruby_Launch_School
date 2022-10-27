@@ -19,3 +19,9 @@ end
 p "Before no_mutate method: #{a}"
 no_mutate(a)
 p "After no_mutate method: #{a}"
+
+def add_three(number)
+  number + 3
+end
+returned_value = add_three(4)
+puts returned_value
