@@ -602,3 +602,34 @@ did this affect a's value?  no, because 'number' is scoped at the method definit
 
 
 ```
+
+```
+a = [1, 2, 3]
+
+# Example of a method definition that mutates its argument permanently
+def mutate(array)
+  array.pop
+end
+
+p "Before mutate method: #{a}"  #Before mutate method: [1, 2, 3]
+mutate(a)
+p "After mutate method: #{a}" #After mutate method: [1, 2]
+```
+
+we have permanently modified the array that local variabble 'a' references by passing it to the mutate method, even though 'a' is outside the definitions scope.
+this is because the 'pop' method 'mutates the caller'. a is still pointing to the same array
+
+contrast this with a method definition that does not mutate the caller
+
+```
+a = [1, 2, 3]
+
+# Example of a method definition that does not mutate the caller
+def no_mutate(array)
+  array.last
+end
+
+p "Before no_mutate method: #{a}"
+no_mutate(a)
+p "After no_mutate method: #{a}"
+```
