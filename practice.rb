@@ -7,4 +7,4 @@ puts "Hello, " + name
   puts name
 end  
 
-
+# Methods
