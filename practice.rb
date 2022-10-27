@@ -1,10 +1,7 @@
-puts "what is your name?"
+def some_method(number)
+  number = 7 # this is implicitly returned by the method
+end
 
-name = gets.chomp 
-
-puts "Hello, " + name 
-10.times do 
-  puts name
-end  
-
-# Methods
+a = 5
+some_method(a)
+puts a
