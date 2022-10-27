@@ -669,3 +669,42 @@ puts returned_value
 ```
 
 - Main point - in Ruby, the 'return' reserved words is not required in order to return something from a method
+
+# Chaining Methods
+
+```
+"hi there".length.to_s      # returns "8" - a String
+```
+
+the String 'length' method returns an integer, and we can call to_s on integers to convert them into strings
+
+```
+def add_three(n)
+  puts n + 3
+end
+```
+
+we are using puts to output the incremented value as opposed to implicitly returning it
+
+```
+add_three(5).times { puts "will this work?" }
+```
+
+this results in an error because:
+
+- 'puts' always returns nil
+
+so to fix this:
+
+```
+
+def add_three(n)
+new_value = n + 3
+puts new_value
+new_value
+end
+
+- could also use 'return new_value' but since new_value is the last expression in the method definition, it's being implicitly returned
+
+
+```
