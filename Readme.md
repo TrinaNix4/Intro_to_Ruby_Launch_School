@@ -706,3 +706,73 @@ end
 ```
 
 - could also use 'return new_value' but since new_value is the last expression in the method definition, it's being implicitly returned
+
+# Method Calls as Arguments
+
+```
+def add(a, b)
+  a + b
+end
+
+def subtract(a, b)
+  a - b
+end
+```
+
+1. 'add' and 'subtract' methods defined;
+   both takes parameters a and b
+
+2. call these methods by passing integer values:
+
+```
+add(20, 45)
+=> 65
+# returns 65
+
+subtract(80, 10)
+=> 70
+# returns 70
+```
+
+- in ruby, we can pass a method call as an argument to other methods
+
+- these methods return integer values - the returned value is what is being passed as arguments
+
+example:
+
+```
+def multiply(num1, num2)
+  num1 * num2
+end
+```
+
+now pass 'add' and 'subtract' methods as arguments to multiply:
+
+```
+multiply(add(20, 45), subtract(80, 10))
+=> 4550
+# returns 4550
+```
+
+or another example
+
+```
+add(subtract(80, 10), multiply(subtract(20, 6), add(30, 5)))
+=> 560
+```
+
+breakdown:
+
+- first, we're passing 'add' 2 arguments: subtract(80, 10) nad multiply(subtract(20, 6), add(30, 5))
+
+- the first argument, the 'subtract' method call, returns 70
+
+- the 2nd argument, the 'multiply' method call, furthermore has two arguments: subtract(20, 6) and add(30, 5)
+
+  - here, subtract(20, 6) returns 14 and add(30, 5) returns 35 thus the method call becomes multiply(14, 35). this returns 490
+
+- putting together the return values of those 2 method calls, we have add(70, 490), which returns 560
+
+# Summary
+
+We've seen that method calls always return a value and we can pass that method call as an argument to another method call based on the returned value. it's vital to know what our defined methods are returning, since in the final analysis, this is what is actually being passed as arguments to other method calls.
