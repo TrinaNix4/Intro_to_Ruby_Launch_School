@@ -511,3 +511,18 @@ we pass the word, or string of words, that we want to use in the 'say' method de
 when we pass those words into the method definition, they're assigned to the local variable 'words' and we can use them however we please from within the method definition
 
 the 'words' local variable is scoped at the method definition level; cannot reference this local variable outside of the 'say' method definition
+
+# Default Parameters
+
+structure the method definition so that it always works, whether given arguments or not.
+
+```
+def say(words='hello')
+  puts words + '.'
+end
+
+say()
+say("hi")
+say("how are you")
+say("I'm fine")
+```
