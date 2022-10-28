@@ -816,3 +816,23 @@ var res = multiply(3, 5)
 so we have function:main (line 5) on the bottom of the stack and function:mulitply (line 2) on top of it.
 
 - in multiply, the only line is a return. when we return something it's popped off the stack so our main function is done and stack is empty
+
+# Stack Frame Contents
+
+Contains:
+
+- the function that was invoked (e.g. multiply)
+- the parameters that were passed to the function
+- current line number
+
+# Stack Definition
+
+- an ordered set of stack frames
+  -to do list for function calls or invocations
+
+- most recently invoked is on the top of the stack
+- the bottom of the stack is the first function invoked
+- the stack is processed from top to bottom
+  - last in, first out
+
+* the call stack has a limited size that varies, but usually sufficient for more than 10000 stack entries. if the stack runs out of room, you will see a 'systemstackerror' exception
