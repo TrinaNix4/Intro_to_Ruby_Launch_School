@@ -776,3 +776,43 @@ breakdown:
 # Summary
 
 We've seen that method calls always return a value and we can pass that method call as an argument to another method call based on the returned value. it's vital to know what our defined methods are returning, since in the final analysis, this is what is actually being passed as arguments to other method calls.
+
+# The Call Stack
+
+why does understanding the stack matter?
+
+- it's helpful for debugging and it's - fundamental to how JS/RUBY works
+
+# What is the call stack?
+
+- a "todo list" of function invocations
+
+  - one things is happening at any given time, so ruby needs to keep track of a history of invoked but not completed function calls
+
+  - last in, first out structure
+
+    - when adding, it's added to the top. and to remove, take it off the top (don't remove from the bottom)
+
+  # How your code changes the stack
+
+  - whenever you invoke a function, the details of the invocation are saved to the top of the stack (pushed to the top)
+
+  - whenever a function returns, the information about the invocation is take off the top of the stack (popped off the top)
+
+# Stack Example
+
+```
+function multiply(x, y){
+  return x * y;
+}
+var res = multiply(3, 5)
+
+```
+
+- function called multiply being called on line 5
+  - the first function being invoked is the 'main' function. added to the stack
+- in the main function, we are calling multiply so add a stack frame to the top of the stack
+
+so we have function:main (line 5) on the bottom of the stack and function:mulitply (line 2) on top of it.
+
+- in multiply, the only line is a return. when we return something it's popped off the stack so our main function is done and stack is empty
