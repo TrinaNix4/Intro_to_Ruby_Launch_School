@@ -836,3 +836,13 @@ Contains:
   - last in, first out
 
 * the call stack has a limited size that varies, but usually sufficient for more than 10000 stack entries. if the stack runs out of room, you will see a 'systemstackerror' exception
+
+# Summary
+
+methods are a major part of programming in ruby
+
+knowing the difference between puts and return will help avoid common pitfalls
+
+knowing how and when to use method chaining will help better read code and write more succint code
+
+- watch out for nils.
