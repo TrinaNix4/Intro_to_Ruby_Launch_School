@@ -846,3 +846,9 @@ knowing the difference between puts and return will help avoid common pitfalls
 knowing how and when to use method chaining will help better read code and write more succint code
 
 - watch out for nils.
+
+# Conditionals
+
+- conditionals formed using a combo of 'if' statements and comparison and logical operators (<, >, <=, >=, ==, !=, &&, || )
+
+- basic logical structures defined with reserved words if, else, elsif, and end
