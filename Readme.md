@@ -916,3 +916,32 @@ end
 ```
 
 First the x && y statement will be executed. If that statement is true, then the program will execute the # do something code on the next line. If the x && y statement is false, then the z will be evaluated. If the z is true, the code on the next line will be evaluated. If the z is false, then the code will exit the if statement.
+
+# Ternary Operator
+
+uses a combination of the ? and :
+
+```
+true ? "this is true" : "this is not true"
+
+false ? "this is true" : "this is not true"
+
+```
+
+- first, computer evaluates what is to the left of the ?; if the expression to the left of ? is true, the code directly to the right of the ? gets executed;
+
+- if the code on the left of ? is false, then the code directly to the right of the : gets executed
+
+* When should I use a Ternary expression?
+
+- should be used to select between 2 values, not to choose betweeen 2 actions (an action would be something like printing a value or setting a variable to a new value)
+
+- the ternary result should always be assigned to a variable, passed to a method as an argument or returned by a method. if not doing any of these things, an if/else statement would be better
+
+```
+foo = hitchhiker ? 42 : 3.14  (assign result of ?: to a variable)
+
+puts(hitchhiker ? 42 : 3.14)  - pass result as an argument
+
+return hitchhiker ? 42 : 3.14  - return result
+```
