@@ -852,3 +852,35 @@ knowing how and when to use method chaining will help better read code and write
 - conditionals formed using a combo of 'if' statements and comparison and logical operators (<, >, <=, >=, ==, !=, &&, || )
 
 - basic logical structures defined with reserved words if, else, elsif, and end
+
+if using 1-line syntax, must use 'then'
+
+```
+if x==3 then puts "x is 3" end
+```
+
+- can append the 'if' condition at the very end.
+
+```
+puts 'x is 3' if x ==3
+```
+
+- reserved word 'unless'. acts as opposite of 'if' so used like this:
+
+```
+puts "x is NOT 3" unless x ==3;
+```
+
+# Comparisons
+
+- the expressions or values that an operator uses are its operands. in comparisons, the expressions to the left and right of the operator are the operands
+
+1. '==' the equal to operator; anything to the L of the symbol is exactly equal to anything on the right
+
+2. != 'not equal to' operator. anythign to the left of the symbol is not equal to anything to the right
+
+3. < - less than symbol; anything to the left of the symbol has a lower value than anything to the right
+
+4. > - greater than symbol; anything to the left of symbol has a higher value than anything to the right
+
+- cannot use < > for values of different types
