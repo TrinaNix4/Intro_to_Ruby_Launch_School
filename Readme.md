@@ -945,3 +945,9 @@ puts(hitchhiker ? 42 : 3.14)  - pass result as an argument
 
 return hitchhiker ? 42 : 3.14  - return result
 ```
+
+# Case Statement
+
+similar function to an 'if' statement; use reserved words 'case, when, else, and end.'
+
+first, define a case and then evaluate the value of the case and what operation to complete if the case is true;
