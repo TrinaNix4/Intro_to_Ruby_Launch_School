@@ -884,3 +884,35 @@ puts "x is NOT 3" unless x ==3;
 4. > - greater than symbol; anything to the left of symbol has a higher value than anything to the right
 
 - cannot use < > for values of different types
+
+# Combining Expressions
+
+1. && 'and' operator; expressions to the L and R both have to be true for the entire expression to be true
+
+2. || operator - either expression to the L or R has to be true for the entire expression to be evaluated to true
+
+3. ! the 'not' operator; when added in front of a boolean expression it will change that boolean value to its opposite
+
+```
+!(4 == 4)
+=> false
+```
+
+ruby first evaluates whats in the parentheses then the ! operator changes it;
+
+- helpful to use parentheses to group expressions together; computer will evaluate parentheses in normal algebraic order
+
+- Order of Precedence - operations from highest order or precedence to lowest
+
+1. <=, <, >=, > - comparison
+2. ==, != - equality
+3. && - logical AND
+4. || - logical OR
+
+```
+if x && y || z
+ # do something
+end
+```
+
+First the x && y statement will be executed. If that statement is true, then the program will execute the # do something code on the next line. If the x && y statement is false, then the z will be evaluated. If the z is true, the code on the next line will be evaluated. If the z is false, then the code will exit the if statement.
