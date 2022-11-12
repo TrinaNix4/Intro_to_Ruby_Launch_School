@@ -1,10 +1,10 @@
 def all_caps(string)
-  if string.length > 10
-    string.upcase
-  else
-    string
+    if string.length > 10
+      string.upcase
+    else    
+      string
+    end
   end
-end 
 
-puts all_caps("dinosaur are cool")
-puts all_caps("dinosaur")
+  puts all_caps("dinosaurs are extinct")
+  puts all_caps("dinosaurs")
