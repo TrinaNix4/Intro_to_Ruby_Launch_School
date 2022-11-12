@@ -1,11 +1,4 @@
-a = 5
+a = (!true || (!(100 / 5) == 20) || ((328 / 4) == 82)) || false
 
-case a 
-when 5
-  puts "a is 5"
-when 6
-  puts "a is 6"
-else
-  puts 'a is neither 5, nor 6'
-end 
 
+puts a 
