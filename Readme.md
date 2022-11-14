@@ -1061,3 +1061,36 @@ end
 puts x # 2 - value was changed
 
 ```
+
+# While Loops
+
+- a while loop is given a parameter that evals as either true or false.
+
+- once the expression becomes false, the while loop is not executed again and program continues after while loop
+
+```
+x = gets.chomp.to_i
+
+while x >= 0
+  puts x
+  x = x - 1
+end
+
+puts "done!"
+```
+
+because we're using the x >= 0 expression to test if we should execute the loop, the code within the loop must modify the variable x in some way. if it doesn't, then x >= 0 will always evaluate to true and cause an infinite loop
+
+unlike the loop method, while is not implemented as a method. so a while loop does not have its own scope, so:
+
+```
+x = 0
+while x < 5
+  y = x * x
+  x += 1
+end
+
+puts y # 16
+```
+
+even though y is initalized in the body of the while loop, its still in scope after the loop finished running
