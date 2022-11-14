@@ -951,3 +951,22 @@ return hitchhiker ? 42 : 3.14  - return result
 similar function to an 'if' statement; use reserved words 'case, when, else, and end.'
 
 first, define a case and then evaluate the value of the case and what operation to complete if the case is true;
+
+# Loops and Iterators
+
+a loop is the repetitive execution of a piece of code for a given amount of repetitions or until a certain condition is met
+
+- a simple loop
+
+```
+# loop_example.rb
+
+loop do
+  puts "This will keep printing until you hit Ctrl + c"
+end
+```
+
+'loop' takes a block (denoted by {...} or do....end)  
+a loop will execute any code within that block until you manually intervene with a ctrl + c or insert a break statement inside the block which will force the loop to stop and execution will continue after the loop
+
+# Controlling Loop Execution
