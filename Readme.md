@@ -1113,3 +1113,25 @@ puts "Done!"
 ```
 
 - like while loops, until is not a method and until loops do not have their own scope
+
+# Do/While Loops
+
+- similar to a while loop; but the code within the loop gets executed one time, prior to the conditional check to see if the code should be executed
+
+- the conditional check is placed at the end of the loop as opposed to the beginning.
+
+code that asks if user wants to perform an action again, but prompt the user to enter 'Y'
+
+- classic case for a do/while because we repeatedldy perform an action based on some condition, but we want the action to be executed once no matter what
+
+```
+# perform_again.rb
+
+loop do
+  puts "Do you want to do that again?"
+  answer = gets.chomp
+  if answer != 'Y'
+    break
+  end
+end
+```
