@@ -1094,3 +1094,22 @@ puts y # 16
 ```
 
 even though y is initalized in the body of the while loop, its still in scope after the loop finished running
+
+# Until Loops
+
+opposite of the while loop
+
+```
+# countdown.rb
+
+x = gets.chomp.to_i
+
+until x < 0
+  puts x
+  x -= 1
+end
+
+puts "Done!"
+```
+
+- like while loops, until is not a method and until loops do not have their own scope
