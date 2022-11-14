@@ -970,3 +970,94 @@ end
 a loop will execute any code within that block until you manually intervene with a ctrl + c or insert a break statement inside the block which will force the loop to stop and execution will continue after the loop
 
 # Controlling Loop Execution
+
+the 'break' keyword allows us to exit a loop at any point, so any code after a break will not be executed
+
+break does not exit the program, but only exit the loop and the program will continue on from after the loop
+
+```
+# useful_loop.rb
+
+i = 0
+loop do
+  i = i + 1
+  puts i
+  break         # this will cause execution to exit the loop
+end
+```
+
+```
+i = 0
+loop do
+  i = i + 2
+  puts i
+  if i == 10
+    break #exit the loop here
+  end
+end
+
+$ ruby conditional_loop.rb
+2
+4
+6
+8
+10
+
+
+```
+
+in example above, break was not executed during the first 4 iterations through the loop, but on the 5th, the 'if' statement evaluated as true and the code within the 'if' statement was executed, which is just 'break' and the loop was exited
+
+similar to using 'break' to exit a looop, we can use the keyword 'next' to skip the rest of the current iteration and start the next iteration.
+for example, same as before but we will skip 4
+
+```
+i = 0
+loop do
+  i = i + 2
+  if i ==4
+    next  #skip the rest of the code in this iteration
+  end
+  puts i
+  if i == 10
+    break
+  end
+end
+
+
+$ ruby next_loop.rb
+2
+6
+8
+10
+```
+
+the code did not print out 4 because that was skipped over. execution continued to the next iteration of the loop
+
+'break' and 'next' can be used with 'loop' or any other loop construct in Ruby.
+
+- the block passed to 'loop' introduces a new scope.
+- from inside the block, you can access variables that were initialized outside the block,
+- however, from outside the block you cannot access variables that were initialized inside the block
+
+```
+loop do
+  x = 42
+  break
+end
+
+puts x
+```
+
+this raises an error because x is not in scope outside the block
+
+```
+x  = 42
+loop do
+  puts x # prints 42, x is in scope    inside the block
+  x = 2  # we can change the value of x
+  break
+end
+puts x # 2 - value was changed
+
+```
