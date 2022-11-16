@@ -1135,3 +1135,90 @@ loop do
   end
 end
 ```
+
+# For Loops
+
+- used to loop over a collection of elements
+
+- for loop has a definite end since it's looping over a finite number of elements
+
+- begins with the reserved word 'for'
+  followed by a variable, then the 'in' reserved word, and a collection of elements
+
+```
+# countdown3.rb
+
+x = gets.chomp.to_i
+
+for i in 1..x do
+  puts x - i
+end
+
+puts "Done!"
+```
+
+# Conditionals Within Loops
+
+an if statement in a while loop
+
+```
+# conditional_while_loop.rb
+
+x = 0
+
+while x <= 10
+  if x.odd?
+    puts x
+  end
+  x += 1
+end
+```
+
+- uses the odd? method to decide if the current variable in the loop is odd
+
+- if it is, it prints to the screen
+
+- then, x increments by one, and the loop proceeds to next iteration
+
+- 'next' and 'break' can be useful when looping
+
+  - if you place 'next' reserved word in a loop, it will jump from that line to the next loop iteration without executing the code beneath it
+
+    - if you place the 'break' reserved word in a loop, it will exit the loop immediately witwhout executing any more code in the loop
+
+```
+# conditional_while_loop_with_next.rb
+
+x = 0
+
+while x <= 10
+  if x == 3
+    x += 1
+    next
+  elsif x.odd?
+    puts x
+  end
+  x += 1
+end
+
+```
+
+'next' is used above to avoid printing the number 3;
+
+```
+#conditional while looop with break
+
+x = 0
+
+while x <= 10
+  if x == 7
+    break
+  elseif x.odd?
+    puts x
+  end
+  x += 1
+end
+
+```
+
+- the entire loop exits when the value of x reaches 7;
