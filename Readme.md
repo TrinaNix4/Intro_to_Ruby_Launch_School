@@ -1222,3 +1222,40 @@ end
 ```
 
 - the entire loop exits when the value of x reaches 7;
+
+# Iterators
+
+- iterators are methods that naturally loop over a given set of data and allow you to operate on each element in the collection (usually preferred over loops)
+
+e.g. an array of names and wanted to print them to screen
+
+use the 'each' method
+
+```
+# practice_each.rb
+
+names = ['Bob', 'Joe', 'Steve', 'Janice', 'Susan', 'Helen']
+
+names.each { |name| puts name }
+```
+
+- we have called the 'each' method using the dot operator (.) on the array
+- it loops through each element in the array, in order, starting from 'bob'
+
+- then it executes the code within the block - defined by {}
+
+- each time we iterate over the array, we need to assign the value of the element to a variable - |name|
+- after that, write the logic we want to use to operate on the variable.
+
+```
+names = ['Bob', 'Joe', 'Steve', 'Janice', 'Susan', 'Helen']
+x = 1
+
+names.each do |name|
+  puts "#{x}.#{name}"
+  x += 1
+end
+```
+
+- added the counter 'x' to add a number before each name, created a numbered list
+- x is incremented every time we go through the iteration
