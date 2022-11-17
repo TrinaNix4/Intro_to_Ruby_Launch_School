@@ -1259,3 +1259,54 @@ end
 
 - added the counter 'x' to add a number before each name, created a numbered list
 - x is incremented every time we go through the iteration
+
+# Recursion
+
+- another way to create a loop;
+- recursion is the act of calling a method from within itself
+
+example:
+want to know what the double of a number is.
+then the double of that number, etc.
+want to double the number until the pre-double number is 10 or greater.
+
+```
+def doubler(start)
+  puts start * 2
+end
+
+```
+
+then:
+
+```
+irb(main):001:0> def doubler(start)
+irb(main):002:1>   puts start * 2
+irb(main):003:1> end
+=> :doubler
+irb(main):004:0> doubler(2)
+4
+=> nil
+irb(main):005:0> doubler(4)
+8
+=> nil
+irb(main):006:0> doubler(8)
+16
+=> nil
+```
+
+this can be done much more simply using recursion
+
+e.g.
+
+```
+def doubler(start)
+  puts start
+  if start < 10
+    doubler(start * 2)
+  end
+end
+
+```
+
+this version of the method calls the 'doubler' method again, passing it the doubled version of the value stored in the 'start' variable
