@@ -1343,3 +1343,72 @@ key concept - there is some baseline condition that returns a value, which then 
 - in ruby, often reach for an iterator before a loop
 
 - recursion, the ability to call a method inside of itself
+
+# Arrays
+
+- an array is a list of elements that can be of any type.
+
+- arrays are indexed lists. each slot in an array is numbered.
+- an element is referenced by its index number and []
+  - e.g. array[3] all indices start with number 0
+
+# Modifying arrays
+
+array.pop - mutates the caller; returned value is the popped element
+
+array.push("another string") - add the item back permanently
+
+another way to add would be the shovel operator (<<)
+
+```
+array << "another string"
+```
+
+both the shovel method and push mutate the caller, so the original array is modified
+
+- map method
+
+  - iterates over an array applying a block to each element of the array and returns a new array with those results
+  - 'collect' method does the same thing
+
+  ```
+  a = [1, 2, 3, 4, 5, 6]
+  a.map{|num| num**2}
+  => [1, 4, 9, 16]
+
+  ```
+
+  map and collect do not mutate the caller.
+
+  - delete_at method used for eliminating the value at a certain index
+  - this one does mutate the caller - changes the array permanently
+
+  ```
+  a.delete_at(1)
+  => [1, 3, 4]
+
+  ```
+
+  - if you know the value you want to delete, but not the index, use 'delete'
+  - delete permanently deletes all instances of the provided value from the array
+
+```
+
+my_pets = ["cat", "dog", "bird", "snake"]
+my_pets.delete("snake")
+
+```
+
+- uniq method - this iterates through an array, deletes any duplicate value that exists, then returns the result as a new array
+
+```
+b = [1, 1, 2, 2, 3, 3, 4, 4]
+
+b.uniq
+=> [1, 2, 3, 4]
+b
+=> [1, 1, 2, 2, 3, 3, 4, 4]
+```
+
+- does not modify the original array, it returns a new array with the duplicates removed
+- if you add the bang suffix (!) you can perform uniq method destructively, much like delete works
