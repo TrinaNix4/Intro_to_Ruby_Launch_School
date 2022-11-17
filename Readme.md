@@ -1310,3 +1310,36 @@ end
 ```
 
 this version of the method calls the 'doubler' method again, passing it the doubled version of the value stored in the 'start' variable
+
+# Another example
+
+- method that uses recursion
+  to calculate the nth number in the fibonacci sequence
+
+  - a sequence in which each number is the sum of the previous two numbers in the sequence
+
+  ```
+  def fibonacci(number)
+    if number < 2
+      number
+    else
+      fibonacci(number - 1) + fibonacci(number - 2)
+    end
+  end
+
+  puts fibonacci(6)
+  ```
+
+- calling the fibonacci method from within itself two times
+
+key concept - there is some baseline condition that returns a value, which then 'unwinds' the recursive calls.
+
+- think of successive recursive calls building up, until some value is returned, and only then can the recursive calls be evaluated
+
+# Summary
+
+- loops and iterators are a great way to perform repeated operations on a data set
+
+- in ruby, often reach for an iterator before a loop
+
+- recursion, the ability to call a method inside of itself
