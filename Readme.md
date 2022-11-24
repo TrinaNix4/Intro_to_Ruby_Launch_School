@@ -1426,3 +1426,7 @@ irb :002 > numbers.select { |number| number > 4 }
 irb :003 > numbers
 => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
+
+# Methods with a !
+
+the bang suffix at the end of the method indicates that the method will change (or mtuate)
