@@ -1429,4 +1429,8 @@ irb :003 > numbers
 
 # Methods with a !
 
-the bang suffix at the end of the method indicates that the method will change (or mtuate)
+the bang suffix at the end of the method indicates that the method will change (or mutate) the caller permanently.
+
+\*not always the case though so check the ruby docs to see if it will behave destructively or not
+
+- also methods like pop and push exist that mutate the caller but do not have a ! at the end
