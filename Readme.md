@@ -1434,3 +1434,37 @@ the bang suffix at the end of the method indicates that the method will change (
 \*not always the case though so check the ruby docs to see if it will behave destructively or not
 
 - also methods like pop and push exist that mutate the caller but do not have a ! at the end
+
+# Mutating the Caller and Arguments
+
+```
+def mutate(arr)
+  arr.pop
+end
+
+def not_mutate(arr)
+  arr.select { |i| i > 3 }
+end
+
+a = [1, 2, 3, 4, 5, 6]
+mutate(a)
+not_mutate(a)
+
+puts a
+
+
+```
+
+the last line will output 1, 2, 3, 4, and 5.
+
+- the mutate method performed a destructive action (pop) on its argument, thereby modifying the 'a' array
+
+- the 6 element popped out of the original array
+
+- the 'not_mutate' method performed a non-destructive action (select) the original variable was unmodified 
+
+- inside 'mutate', arr.pop mutates its caller, which in turn mutates the argument passed to 'mutate'
+
+- inside 'not mutate', arr.select does not mutate its caller, so not_mutate doesn't mutate its argument either 
+
+
