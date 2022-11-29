@@ -1461,10 +1461,46 @@ the last line will output 1, 2, 3, 4, and 5.
 
 - the 6 element popped out of the original array
 
-- the 'not_mutate' method performed a non-destructive action (select) the original variable was unmodified 
+- the 'not_mutate' method performed a non-destructive action (select) the original variable was unmodified
 
 - inside 'mutate', arr.pop mutates its caller, which in turn mutates the argument passed to 'mutate'
 
-- inside 'not mutate', arr.select does not mutate its caller, so not_mutate doesn't mutate its argument either 
+- inside 'not mutate', arr.select does not mutate its caller, so not_mutate doesn't mutate its argument either
 
+# Nested Arrays
+
+- arrays with arrays inside of them
+
+# Comparing Arrays
+
+- compare arrays for equality using the == operator
+
+# Common Array Methods
+
+- Ruby has common methods built-in its array class (bookmark the docs page to refer to)
+
+* include?
+
+  - this method checks to see if the argument given is included in the array
+
+  - it returns a boolean value; true or false
+
+  * flatten
+
+  - can be used to take an array that contains nested arrays and create a one-dimensional array
+
+  - a = [1, 2, 4, 5,], [6, 7]
+    a.flatten
+    => [1, 2, 3, 4, 5, 6, 7]
+
+  is flatten destructive? look in docs
+
+  - each_index - iterates through the array much like 'each' does, however the variable represents teh index number (not the value at each index);
+
+  - it passes the index of the element into the block and you may do with it as you please ; the original array is returned
+
+  # each_with_index
+ - gives us the ability to mainipulate both the value and the index by passing in 2 parameters to the block of code;
+- the first is the value and the second is the index 
+- you can then use them in the block 
 
