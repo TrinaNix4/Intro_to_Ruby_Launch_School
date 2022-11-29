@@ -1500,7 +1500,19 @@ the last line will output 1, 2, 3, 4, and 5.
   - it passes the index of the element into the block and you may do with it as you please ; the original array is returned
 
   # each_with_index
- - gives us the ability to mainipulate both the value and the index by passing in 2 parameters to the block of code;
-- the first is the value and the second is the index 
-- you can then use them in the block 
 
+- gives us the ability to mainipulate both the value and the index by passing in 2 parameters to the block of code;
+- the first is the value and the second is the index
+- you can then use them in the block
+
+```
+irb: 001 > a = [1, 2, 3, 4, 5]
+=> [1, 2, 3, 4, 5]
+irb: 002 > a.each_with_index { |val, idx| puts "#{idx+1}. #{val}" }
+1. 1
+2. 2
+3. 3
+4. 4
+5. 5
+=> [1, 2, 3, 4, 5]
+```
