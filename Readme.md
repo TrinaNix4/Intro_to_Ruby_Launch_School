@@ -1541,3 +1541,39 @@ irb :001 > [1, 2, 3].product([4, 5])
 - so many more interesting arrays, remember to check docs if you ever have something you want to do with an array
 
 # each vs. map
+
+- each
+
+* provides a simple way of iterating over a collection and is more preferred than using 'for' loop
+
+* works on objects that allow for iteration and is commonly used with a block
+
+* if given a block, 'each' runs the code in the block once for each element in the collection and returns the collection it was invoked on
+
+* if no block given, returns an enumerator
+
+e.g.
+
+```
+irb :001 > a = [1, 2, 3]
+irb :002 > a.each { |e| puts e }
+1
+2
+3
+=> [1, 2, 3]
+```
+
+we iterate over each element in the array 'a' and print it out. it returns [1, 2, 3]
+
+we can also modify the elements in 'a' and print them out
+
+```
+irb :003 > a = [1, 2, 3]
+irb :004 > a.each { |e| puts e + 2 }
+3
+4
+5
+=> [1, 2, 3]
+```
+
+we print out the modified values and return the original collection 'a'
