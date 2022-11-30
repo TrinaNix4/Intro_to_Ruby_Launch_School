@@ -1577,3 +1577,45 @@ irb :004 > a.each { |e| puts e + 2 }
 ```
 
 we print out the modified values and return the original collection 'a'
+
+can also use do and end
+e.g.
+
+```
+irb :005 > a = [1, 2, 3]
+irb :006 > a.each do |e|
+irb :007 *   puts e + 2
+irb :008 * end
+3
+4
+5
+=> [1, 2, 3]
+```
+
+an example with no block and an enumerator is returned
+
+```
+irb :009 > a = [1, 2, 3]
+irb :010 > a.each
+=> #<Enumerator: ...>
+```
+
+# Map
+
+- works on objects that allow for iteration
+
+- when given a block, it invokes the given block once for each element in the collection
+
+- where it differs from 'each' is the returned value.
+
+  - map creates and returns a new array containing the values returned by the block
+
+  ```
+  irb :011 > a = [1, 2, 3]
+  irb :012 > a.map { |x| x**2 }
+  => [1, 4, 9]
+  ```
+we square each element in the block and create a new array containing the returned values by the block.  the new array is returned 
+
+* use map for transformation and use each for iteration 
+
