@@ -1516,3 +1516,28 @@ irb: 002 > a.each_with_index { |val, idx| puts "#{idx+1}. #{val}" }
 5. 5
 => [1, 2, 3, 4, 5]
 ```
+
+- sort
+
+* handy way to order an array; it returns a sorted array
+
+```
+irb :001 > a = [5, 3, 8, 2, 4, 1]
+=> [5, 3, 8, 2, 4, 1]
+irb :002 > a.sort
+=> [1, 2, 3, 4, 5, 8]
+```
+
+- product
+
+* can be used to combine two arrays
+* it returns an array that is a combo of all elements from all arrays
+
+```
+irb :001 > [1, 2, 3].product([4, 5])
+=> [[1, 4], [1, 5], [2, 4], [2, 5], [3, 4], [3, 5]]
+```
+
+- so many more interesting arrays, remember to check docs if you ever have something you want to do with an array
+
+# each vs. map
