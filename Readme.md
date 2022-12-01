@@ -1783,3 +1783,18 @@ when to use a has vs array:
   ```
 
 # Common Hash Methods
+
+common methods:
+
+- key?
+
+* allows you to check if a hash contains a specific key. it returns a boolean value
+
+```
+irb :001 > name_and_age = { "Bob" => 42, "Steve" => 31, "Joe" => 19}
+=> {"Bob"=>42, "Steve"=>31, "Joe"=>19}
+irb :002 > name_and_age.key?("Steve")
+=> true
+irb :003 > name_and_age.key?("Larry")
+=> false
+```
