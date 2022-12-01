@@ -1810,3 +1810,45 @@ irb :005 > name_and_age.select { |k,v| (k == "Bob") || (v == 19) }
 => {"Bob"=>42, "Joe"=>19}
 
 ```
+
+- fetch
+  allows you to pass a given key and it will return the value for that key if it exists
+- can also specify an option for return if the key is not present
+
+```
+irb :006 > name_and_age.fetch("Steve")
+=> 31
+irb :007 > name_and_age.fetch("Larry")
+=> KeyError: key not found: "Larry"
+     from (irb):32:in `fetch'
+     from (irb):32
+     from /usr/local/rvm/rubies/ruby-2.5.3/bin/irb:16:in `<main>'
+irb :008 > name_and_age.fetch("Larry", "Larry isn't in this hash")
+=> "Larry isn't in this hash"
+```
+
+- to_a
+
+* returns an array version of your hash when called.
+* does not modify the hash permanently
+
+```
+irb :009 > name_and_age.to_a
+=> [["Bob", 42], ["Steve", 31], ["Joe", 19]]
+irb :010 > name_and_age
+=> {"Bob"=>42, "Steve"=>31, "Joe"=>19}
+```
+
+- keys and values
+
+if you want to retrieve all the keys or all the values out of a hash:
+
+```
+irb :0011 > name_and_age.keys
+=> ["Bob", "Steve", "Joe"]
+irb :0012 > name_and_age.values
+=> [42, 31, 19]
+```
+- notice the returned values are in array format
+
+
