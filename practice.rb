@@ -1,16 +1,5 @@
-arr = [1, 3, 5, 7, 9]
-number = 3
-arr.each do |num|
-  if num == number
-  puts "#{number} is in the array"
-  end
-end 
+top_five_bands = ["Puscifer", "Tool", "A Perfect Circle", "Chelsea Wolfe", "Interpol"]
 
-
-if arr.include?(number)
-  puts "#{number} is in the array."
-end 
-
-irb :011 > a = [1, 2, 3]
-irb :012 > a.map { |x| x**2 }
-=> [1, 4, 9]
+top_five_bands.each_with_index do |band, index | 
+  puts "#{index + 1}. #{band}"
+end
