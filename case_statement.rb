@@ -1,12 +1,13 @@
-def count_to_zero(number)
-  if number <= 0 
-    puts number
-  else
-    puts number
-    count_to_zero(number - 1)
-  end
-end
+family = {  uncles: ["bob", "joe", "steve"],
+            sisters: ["jane", "jill", "beth"],
+            brothers: ["frank","rob","david"],
+            aunts: ["mary","sally","susan"]
+          }
 
-count_to_zero(-1)
-count_to_zero(5)
-count_to_zero(20)
+  siblings = family.select do |k, v|
+    k == :sisters || k == :brothers
+  end 
+
+arr = siblings.values.flatten
+
+p arr
