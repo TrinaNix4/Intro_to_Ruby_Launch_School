@@ -5,7 +5,7 @@ top_five_bands.each_with_index do |band, index |
 end
 
 
-arr = [1, 2, 3, 4]
+arr = [2, 4, 5, 6, 7]
 new_arr = []
 
 arr.each do |n|
@@ -14,3 +14,4 @@ end
 
 p arr
 p new_arr
+
