@@ -1711,3 +1711,51 @@ Bob's height is 6 ft
 Bob's weight is 160 lbs
 Bob's hair is brown
 ```
+
+# Hashes as Optional Parameters
+
+- can use a hash to accept optional parameters
+
+```
+# optional_parameters.rb
+
+def greeting(name, options = {})
+  if options.empty?
+    puts "Hi, my name is #{name}"
+  else
+    puts "Hi, my name is #{name} and I'm #{options[:age]}" +
+         " years old and I live in #{options[:city]}."
+  end
+end
+
+greeting("Bob")
+greeting("Bob", {age: 62, city: "New York City"})
+```
+- used 'empty?' method to detect whether the options parameter, a hash, has anything passed into it
+
+- called the method twice, once using no optional parameters and a 2nd time using a hash to send optional parameters
+
+you can also pass in arguments to the 'greeting' method like this: 
+
+```
+greeting("Bob", age: 62, city: "New York City")
+
+```
+
+- curly braces are not required when a hash is the last argument
+
+# Hashes vs Arrays
+
+when to use a has vs array:
+* does data need to be associated with a specific label?  
+  - if yes, use a hash
+  - if no label, then an array will typically be fine
+
+* does order matter?
+  - if yes, use an array
+  - as of ruby 1.9, hashes also maintain order, but ordered items are ususally stored in an array
+
+* do i need a "stack" or a "queue" structure?  
+  - if yes, arrays are good a mimicking "first in first out" queues, or "last in first out" stacks 
+
+  
