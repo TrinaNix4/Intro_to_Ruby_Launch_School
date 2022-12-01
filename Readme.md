@@ -1706,5 +1706,8 @@ end
 - we use the each method, but we assign a variable to both the key and the value
 
 ```
-
+Bob's name is bob
+Bob's height is 6 ft
+Bob's weight is 160 lbs
+Bob's hair is brown
 ```
