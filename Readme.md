@@ -1731,11 +1731,12 @@ end
 greeting("Bob")
 greeting("Bob", {age: 62, city: "New York City"})
 ```
+
 - used 'empty?' method to detect whether the options parameter, a hash, has anything passed into it
 
 - called the method twice, once using no optional parameters and a 2nd time using a hash to send optional parameters
 
-you can also pass in arguments to the 'greeting' method like this: 
+you can also pass in arguments to the 'greeting' method like this:
 
 ```
 greeting("Bob", age: 62, city: "New York City")
@@ -1747,15 +1748,38 @@ greeting("Bob", age: 62, city: "New York City")
 # Hashes vs Arrays
 
 when to use a has vs array:
-* does data need to be associated with a specific label?  
+
+- does data need to be associated with a specific label?
+
   - if yes, use a hash
   - if no label, then an array will typically be fine
 
-* does order matter?
+- does order matter?
+
   - if yes, use an array
   - as of ruby 1.9, hashes also maintain order, but ordered items are ususally stored in an array
 
-* do i need a "stack" or a "queue" structure?  
-  - if yes, arrays are good a mimicking "first in first out" queues, or "last in first out" stacks 
+- do i need a "stack" or a "queue" structure?
 
-  
+  - if yes, arrays are good a mimicking "first in first out" queues, or "last in first out" stacks
+
+  # A note on Hash Keys
+
+  most common to use symbols but it is possible to use a different data type for a key
+
+  for example:
+
+  ```
+  irb :001 > {"height" => "6 ft"}     # string as key
+  => {"height"=>"6 ft"}
+  irb :002 > {["height"] => "6 ft"}   # array as key
+  => {["height"]=>"6 ft"}
+  irb :003 > {1 => "one"}             # integer as key
+  => {1=>"one"}
+  irb :004 > {45.324 => "forty-five point something"}  # float as key
+  => {45.324=>"forty-five point something"}
+  irb :005 > {{key: "key"} => "hash as a key"}  # hash as key
+  => {{:key=>"key"}=>"hash as a key"}
+  ```
+
+# Common Hash Methods
