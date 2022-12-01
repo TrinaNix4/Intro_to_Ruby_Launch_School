@@ -1798,3 +1798,15 @@ irb :002 > name_and_age.key?("Steve")
 irb :003 > name_and_age.key?("Larry")
 => false
 ```
+
+- select
+
+* allows you to pass a block and will return any key-value pairs that evaluate to true when passed to the block
+
+```
+irb :004 > name_and_age.select { |k,v| k == "Bob" }
+=> {"Bob"=>42}
+irb :005 > name_and_age.select { |k,v| (k == "Bob") || (v == 19) }
+=> {"Bob"=>42, "Joe"=>19}
+
+```
