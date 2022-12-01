@@ -11,4 +11,6 @@ if arr.include?(number)
   puts "#{number} is in the array."
 end 
 
-
+irb :011 > a = [1, 2, 3]
+irb :012 > a.map { |x| x**2 }
+=> [1, 4, 9]
