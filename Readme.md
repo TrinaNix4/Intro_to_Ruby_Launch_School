@@ -1615,7 +1615,78 @@ irb :010 > a.each
   irb :012 > a.map { |x| x**2 }
   => [1, 4, 9]
   ```
-we square each element in the block and create a new array containing the returned values by the block.  the new array is returned 
 
-* use map for transformation and use each for iteration 
+  we square each element in the block and create a new array containing the returned values by the block. the new array is returned
 
+* use map for transformation and use each for iteration
+
+# Hashes
+
+- a hash is a data structure that stores items by associated keys
+  (compared to arrays which store items by ordered index)
+
+- entries in a hash are often referred to as key-value pairs
+
+- most often, a hash is created by using symbols as 'keys' and any data types as 'values'
+
+- all key-value pair are surrounded by curly braces {} and comma separated
+
+can be created with 2 syntaxes
+older version:
+
+```
+old_syntax_hash = {:name => "bob"}
+```
+
+newer version:
+
+```
+new_hash = {name: 'bob'}
+```
+
+- can have hashes with many key-value pairs
+
+```
+irb :003 > person = { height: '6 ft', weight: '160 lbs' }
+=> {:height=>'6 ft', :weight=>'160 lbs'}
+```
+
+- to add on to an existing hash
+
+```
+irb :004 > person[:hair] = 'brown'
+=> "brown"
+irb :005 > person
+=> {:height=>'6 ft', :weight=>'160 lbs', :hair=>'brown'}
+
+irb :006> person[:age] = 62
+=> 62
+irb :007> person
+=> {:height=>'6 ft', :weight=>'160 lbs', :hair=>'brown', :age=>62}
+```
+
+- remove something from a hash:
+
+```
+irb :008 > person.delete(:age)
+=> 62
+irb :009 > person
+=> {:height=>'6 ft', :weight=>'160 lbs', :hair=>'brown'}
+```
+
+- retrieve a pieces of info from a hash:
+
+```
+irb :010 > person[:weight]
+=> "160 lbs"
+```
+
+merge two hashes together:
+
+```
+irb :011 > person.merge!(new_hash)
+=> {:height=>'6 ft', :weight=>'160 lbs', :hair=>'brown', :name=>'bob'}
+```
+
+- use the bang! suffix to make this change destructive
+- could have used the merge method, which would have returned a new merged hash, but left the original 'person' hash unmodified
