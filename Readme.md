@@ -1690,3 +1690,21 @@ irb :011 > person.merge!(new_hash)
 
 - use the bang! suffix to make this change destructive
 - could have used the merge method, which would have returned a new merged hash, but left the original 'person' hash unmodified
+
+# Iterating Over Hashes
+
+- hashes can have multiple elements in them so we want to be able to iterate over a hash to do something with each element
+
+```
+person = {name: 'bob', height: '6 ft', weight: '200 lbs', hair: 'brown' }
+
+person.each do |key, value|
+  puts "Bob's #{key} is #{value}"
+end
+```
+
+- we use the each method, but we assign a variable to both the key and the value
+
+```
+
+```
