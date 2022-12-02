@@ -1,13 +1,11 @@
-family = {  uncles: ["bob", "joe", "steve"],
-            sisters: ["jane", "jill", "beth"],
-            brothers: ["frank","rob","david"],
-            aunts: ["mary","sally","susan"]
-          }
+def has_a_b?(string)
+ if string =~ /b/
+   puts "We have a match!"
+ else
+   puts "No match here."
+   end
+ end
 
-  siblings = family.select do |k, v|
-    k == :sisters || k == :brothers
-  end 
-
-arr = siblings.values.flatten
-
-p arr
+ has_a_b?("basketball")
+ has_a_b?("onion")
+ has_a_b?("golf")
