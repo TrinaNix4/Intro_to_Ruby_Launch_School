@@ -1903,3 +1903,9 @@ def has_a_b?(string)
  has_a_b?("golf")
 
 ```
+
+# Ruby Standard Classes
+
+- always look first for among ruby's standard classes
+  - using libraries like 'math' can help solve problems
+    e.g. calculate the square root of a number. use ruby's math module method called 'sqrt'
