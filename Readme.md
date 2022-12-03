@@ -1909,3 +1909,18 @@ def has_a_b?(string)
 - always look first for among ruby's standard classes
   - using libraries like 'math' can help solve problems
     e.g. calculate the square root of a number. use ruby's math module method called 'sqrt'
+
+# Variables as Pointers
+
+- variables act as a pointers to an address space in memory
+
+- the variable doesn't actually contain the value, instead it contains a pointer to a specific area in memory that contains the value
+
+- some operations mutate the address space, while others simply make the variable point to a different address space
+
+- this applies to variables that point to arrays, hashes, or any other data structure that has methods that mutate the caller
+  - if you call a method that mutates the caller or arguments, it will change the value in that objects address space, and any other variables that also point to that object will be affected 
+
+* always pay attention to whether your variables are pointing to the same object(address space) or if they are dealing with copies that occupy different address spaces
+
+
