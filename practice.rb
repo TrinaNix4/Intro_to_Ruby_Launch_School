@@ -1,17 +1,8 @@
-top_five_bands = ["Puscifer", "Tool", "A Perfect Circle", "Chelsea Wolfe", "Interpol"]
-
-top_five_bands.each_with_index do |band, index | 
-  puts "#{index + 1}. #{band}"
+def test(b)
+  b.map {|letter| "I like the letter: #{letter}"}
 end
 
+a = ['a', 'b', 'c']
+test(a)
 
-arr = [2, 4, 5, 6, 7]
-new_arr = []
-
-arr.each do |n|
-  new_arr << n + 2
-end
-
-p arr
-p new_arr
 
