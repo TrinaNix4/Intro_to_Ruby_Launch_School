@@ -1962,3 +1962,49 @@ end
 ```
 
 here we are passing the 'number' into the 'take_block' method and using it in our 'block.call'
+
+# Procs
+
+- procs are blocks that are wrapped in a proc object and stored in a variable to be passed around
+
+```
+# proc_example.rb
+
+talk = Proc.new do
+  puts "I am talking."
+end
+
+talk.call
+```
+
+- procs can also take arguments if specified
+
+```
+# proc_example.rb
+
+talk = Proc.new do |name|
+  puts "I am talking to #{name}"
+end
+
+talk.call "Bob"
+```
+
+- procs can be passed into methods; take our previous passing_block code and modify the method to take a proc instead
+
+```
+#passing_proc.rb
+
+def take_proc(proc)
+  [1, 2, 3, 4, 5].each do |number|
+    proc.call number
+  end
+end
+
+proc = Proc.new do |number|
+  puts "#{number}. Proc being called in the method!"
+end
+
+take_proc(proc)
+```
+
+- using procs gives us the flexibility to be able to resue blocks in more than one place without having to type them out every time
