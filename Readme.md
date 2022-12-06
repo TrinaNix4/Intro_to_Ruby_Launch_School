@@ -1919,8 +1919,31 @@ def has_a_b?(string)
 - some operations mutate the address space, while others simply make the variable point to a different address space
 
 - this applies to variables that point to arrays, hashes, or any other data structure that has methods that mutate the caller
-  - if you call a method that mutates the caller or arguments, it will change the value in that objects address space, and any other variables that also point to that object will be affected 
+  - if you call a method that mutates the caller or arguments, it will change the value in that objects address space, and any other variables that also point to that object will be affected
 
 * always pay attention to whether your variables are pointing to the same object(address space) or if they are dealing with copies that occupy different address spaces
 
+# Blocks and Procs
 
+- blocks, like parameters, can be passed into a method just like normal variables
+
+# passing blocks
+
+```
+def take_block(&block)
+ block.call
+end
+
+take_block do
+ puts "block being called in the method!"
+end
+
+```
+
+- the ampersand in the method definition tells us that the argument is a block; it can be named anything you want
+
+- the block must always be the last parameter in the method definition
+
+- when ready to use the method, we call it like any other method: 'take_block';
+
+- only difference is since this method has an &block parameter, we can pass in a block of code using do/end
