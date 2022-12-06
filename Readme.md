@@ -2008,3 +2008,59 @@ take_proc(proc)
 ```
 
 - using procs gives us the flexibility to be able to resue blocks in more than one place without having to type them out every time
+
+# Exception Handling
+
+- specific process that deals with errors in a manageable and predictable way
+
+- in real world programs there is a large amount of unpredictability - program needs to know what to do when it runs into these exceptional conditions
+
+- ruby has an 'exception' class that makes handling these errors much easie r
+
+- syntactic structure using reserved words 'begin', 'rescue', and 'end' to signify exception handling
+
+```
+# exception_example.rb
+
+begin
+  # perform some dangerous operation
+rescue
+  # do this if operation fails
+  # for example, log the error
+end
+```
+
+a common occurrence in the real world is when a 'nil' value makes its way into our program
+
+```
+# exception_example.rb
+
+names = ['bob', 'joe', 'steve', nil, 'frank']
+
+names.each do |name|
+  begin
+    puts "#{name}'s name has #{name.length} letters in it."
+  rescue
+    puts "Something went wrong!"
+  end
+end
+```
+
+- we've used a begin/rescue/end block to handle any exceptions that may happen within the block
+
+- in the example, theres a nil value in the array so when we go to call .length on 'nil' we get an error
+
+- when an exception is raised, the 'rescue' block will execute and the program will continue to run as it normally would
+
+- if no resuce block, our program would stop once it hit the exception and the rest of the print out would be lost
+
+can also use the 'rescue' in-line like so:
+
+```
+# inline_exception_example.rb
+
+zero = 0
+puts "Before each call"
+zero.each { |element| puts element } rescue puts "Can't do that!"
+puts "After each call"
+```
