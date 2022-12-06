@@ -1947,3 +1947,18 @@ end
 - when ready to use the method, we call it like any other method: 'take_block';
 
 - only difference is since this method has an &block parameter, we can pass in a block of code using do/end
+
+```
+# passing_block.rb
+
+def take_block(number, &block)
+  block.call(number)
+end
+
+number = 42
+take_block(number) do |num|
+  puts "Block being called in the method! #{num}"
+end
+```
+
+here we are passing the 'number' into the 'take_block' method and using it in our 'block.call'
