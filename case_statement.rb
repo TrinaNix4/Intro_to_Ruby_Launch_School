@@ -1,11 +1,9 @@
-def has_a_b?(string)
- if string =~ /b/
-   puts "We have a match!"
- else
-   puts "No match here."
-   end
- end
+# passing_block.rb
 
- has_a_b?("basketball")
- has_a_b?("onion")
- has_a_b?("golf")
+def take_block(&block)
+  block.call
+end
+
+take_block do
+  puts "Block being called in the method!"
+end
