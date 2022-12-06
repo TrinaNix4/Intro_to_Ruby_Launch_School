@@ -2064,3 +2064,7 @@ puts "Before each call"
 zero.each { |element| puts element } rescue puts "Can't do that!"
 puts "After each call"
 ```
+
+- when an exception is raised, ruby will halt execution unless there is code in place to rescue the exception
+
+- there are common built-in exceptions in ruby that come with an attached message

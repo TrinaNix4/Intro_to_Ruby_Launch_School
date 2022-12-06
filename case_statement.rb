@@ -1,10 +1,9 @@
-# passing_block.rb
-
-def take_block(&block)
-  block.call
+def check_in(word)
+  if /lab/ =~ word
+    puts word
+  else
+    puts "no match"
+  end
 end
 
-take_block do
-  puts "Block being called in the method!"
-end
-
+check_in('match')
