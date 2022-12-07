@@ -1,9 +1,4 @@
-def check_in(word)
-  if /lab/ =~ word
-    puts word
-  else
-    puts "no match"
-  end
+def execute(&block)
+  block.call
 end
-
-check_in('match')
+execute{ puts "Hello from inside the execute method!" }
