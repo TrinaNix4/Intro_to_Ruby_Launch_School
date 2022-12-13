@@ -1,9 +1,12 @@
-array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+h = {a:1, b:2, c:3, d:4}
 
-new_array = array.select{ |number| number % 2 == 0 }
+h[:b]
 
-print new_array
+h[:e] = 5
 
-new_array = array.select{ |number| number % 2 == 0 }
+h.delete_if{ |k, v| v < 3.5}
 
-print new_array
+h.delete_if do |k, v|
+  v < 3.5
+end 
+
