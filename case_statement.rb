@@ -11,4 +11,6 @@ contacts["Sally Johnson"][:email] = contact_data[1][0]
 contacts["Sally Johnson"][:address] = contact_data[1][1]
 contacts["Sally Johnson"][:phone] = contact_data[1][2]
 
-p contacts 
+puts "joes email is #{contacts["Joe Smith"][:email]}"
+
+puts "Sally's phone number is #{contacts["Sally Johnson"][:phone]}"
