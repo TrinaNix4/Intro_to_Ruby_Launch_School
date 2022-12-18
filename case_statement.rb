@@ -1,4 +1,8 @@
-result = while true
-  break
+a = 7
+
+def my_value(b)
+  a = b
 end
-p result
+
+my_value(a + 5)
+puts a
