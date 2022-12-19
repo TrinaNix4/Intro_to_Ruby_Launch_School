@@ -6,3 +6,5 @@ end
 
 my_value(a + 5)
 puts a
+puts a
+puts a
