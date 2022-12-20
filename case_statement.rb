@@ -1,9 +1,11 @@
 a = 7
 array = [1, 2, 3]
 
-array.map do |b|
-  a = b + 1
-  puts a
+def my_value(ary)
+  ary.each do |b|
+    a += b
+  end
 end
 
-puts array 
+my_value(array)
+puts a
