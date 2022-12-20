@@ -1,8 +1,8 @@
-a = 7
+a = "Xyzzy"
 
 def my_value(b)
-  a = b
+  b[2] = '-'
 end
 
-my_value(a + 5)
+my_value(a)
 puts a
