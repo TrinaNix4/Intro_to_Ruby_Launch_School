@@ -1,8 +1,7 @@
-a = 7
+array = [1, 2, 3]
 
-def my_value(b)
-  b = a + a
+array.each do |element|
+  a = element
 end
 
-my_value(a)
 puts a
