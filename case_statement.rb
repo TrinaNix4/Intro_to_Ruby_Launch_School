@@ -1,7 +1,7 @@
-a = "Xyzzy"
+a = 7
 
 def my_value(b)
-  b[2] = '-'
+  b = a + a
 end
 
 my_value(a)
