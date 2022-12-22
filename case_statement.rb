@@ -1,5 +1,6 @@
-loop do
-  puts 'Should I stop looping?'
-  answer = gets.chomp
-  break if answer = 'yes'
+say_hello = true
+
+while say_hello
+  puts 'Hello!'
+  say_hello = false
 end
