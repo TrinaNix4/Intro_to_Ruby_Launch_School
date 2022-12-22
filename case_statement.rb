@@ -1,9 +1,7 @@
+iterations = 1
+
 loop do
-  puts 'This is the outer loop.'
-
-  loop do
-    puts 'This is the inner loop.'
-  end
+  puts "Number of iterations = #{iterations}"
+  iterations += 1
+  break if iterations > 5
 end
-
-puts 'This is outside all loops.'
