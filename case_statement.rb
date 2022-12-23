@@ -1,8 +1,8 @@
-say_hello = true
-count = 0
+numbers = []
 
-while say_hello 
-    puts "helloj!"
-    count += 1
-    say_hello = false if count == 5
+while numbers.size < 5 
+  numbers << rand(100)
 end 
+
+puts numbers
+
