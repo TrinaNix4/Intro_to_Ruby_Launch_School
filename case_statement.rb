@@ -1,6 +1,6 @@
-count = 1
+count = 0
 
-until count > 10
-  puts count
+until count == numbers.size
+  puts numbers[count]
   count += 1
 end
