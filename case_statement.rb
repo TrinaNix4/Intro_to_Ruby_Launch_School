@@ -1,3 +1,6 @@
-for i in 1..100
-  puts i if i.odd?
-end
+friends = ['Sarah', 'John', 'Hannah', 'Dave']
+
+for friend in friends
+  puts "hello, #{friend}"
+end 
+
