@@ -1,8 +1,6 @@
-numbers = []
+count = 1
 
-while numbers.size < 5 
-  numbers << rand(100)
-end 
-
-puts numbers
-
+until count > 10
+  puts count
+  count += 1
+end
