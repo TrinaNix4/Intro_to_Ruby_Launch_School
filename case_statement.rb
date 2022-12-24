@@ -1,7 +1,4 @@
-names = ['Sally', 'Joe', 'Lisa', 'Henry']
-
-loop do 
-  puts names.shift
-  break if names.empty?
-
+5.times do |index|
+  puts index
+  break if index == 2
 end
