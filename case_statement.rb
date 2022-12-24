@@ -1,8 +1,11 @@
-loop do
-  number = rand(100)
-  puts number
+process_the_loop = [true].sample
 
-  if number.between?(0, 10)
+if process_the_loop
+  loop do
+    puts "the loop was processed"
     break
   end
-end
+
+else
+  puts "the loop was not processed!"
+end 
