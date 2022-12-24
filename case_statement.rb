@@ -1,12 +1,7 @@
-numbers = []
+names = ['Sally', 'Joe', 'Lisa', 'Henry']
 
-loop do
-  puts 'Enter any number:'
-  input = gets.chomp.to_i
-
-  numbers.push(input)
-  break if numbers.size == 5
-  
+loop do 
+  puts names.shift
+  break if names.empty?
 
 end
-puts numbers
