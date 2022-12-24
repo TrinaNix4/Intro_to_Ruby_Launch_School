@@ -1,11 +1,12 @@
-loop do
-  puts 'What does 2 + 2 equal?'
-  answer = gets.chomp.to_i
+numbers = []
 
-  if answer == 4
-    puts "That's correct!"
-    break
-  else
-    puts "Wrong answer. Try again!"
-  end
+loop do
+  puts 'Enter any number:'
+  input = gets.chomp.to_i
+
+  numbers.push(input)
+  break if numbers.size == 5
+  
+
 end
+puts numbers
