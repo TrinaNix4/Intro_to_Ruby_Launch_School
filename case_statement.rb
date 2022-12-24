@@ -1,11 +1,11 @@
-process_the_loop = [true].sample
+loop do
+  puts 'What does 2 + 2 equal?'
+  answer = gets.chomp.to_i
 
-if process_the_loop
-  loop do
-    puts "the loop was processed"
+  if answer == 4
+    puts "That's correct!"
     break
+  else
+    puts "Wrong answer. Try again!"
   end
-
-else
-  puts "the loop was not processed!"
-end 
+end
