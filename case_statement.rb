@@ -1,4 +1,4 @@
 5.times do |index|
   puts index
-  break if index == 2
+  break if index < 7
 end
