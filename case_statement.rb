@@ -1,7 +1,9 @@
-number = 0
+number_a = 0
+number_b = 0
 
-until number == 10
-  number += 1
-  next if number.odd?
-  puts number
+loop do
+  number_a += rand(2)
+  number_b += rand(2)
+
+  break
 end
