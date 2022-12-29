@@ -1,7 +1,12 @@
+$ ruby something.rb
+>> Do you want me to print something? (y/n)
+y
+something
 
-puts '>> imagine if you were this old
-  ?'
-age_in_years = gets
-age_in_months = 12 * age_in_years.to_i
-puts "You are #{age_in_months} yrs.
- old."
+$ ruby something.rb
+>> Do you want me to print something? (y/n)
+n
+
+$ ruby something.rb
+>> Do you want me to print something? (y/n)
+help
