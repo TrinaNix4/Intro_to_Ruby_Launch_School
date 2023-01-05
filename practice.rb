@@ -1,8 +1,7 @@
-def test(b)
-  b.map {|letter| "I like the letter: #{letter}"}
-end
 
-a = ['a', 'b', 'c']
-test(a)
+puts "do you want me to print something? y/n"
 
+answer = gets.chomp
+
+puts 'something' if answer == 'y'
 
