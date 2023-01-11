@@ -1,16 +1,30 @@
-
-pw = 'defiefnei'
-username = 'admin'
-
-loop do
-  puts 'Please enter username'
-  user_name = gets.chomp
-
-  puts "Please enter password"
-  password_try = gets.chomp
-
-break if user_name == username && password_try == pw
-puts "Authorization failed. Please try again."
+def valid_number?(number_string)
+  number_string.to_i.to_s == number_string
 end
 
-puts "Welcome!"
+
+numerator = nil
+loop do
+puts "Welcome to the Divider.  Please enter a numerator:"
+numerator = gets.chomp
+ 
+break if valid_number?(numerator)
+puts "invalid input. only integers are allowed"
+end 
+
+denominator = nil
+
+loop do
+puts 'Please enter the denominator'
+denominator = gets.chomp
+
+if denominator == '0'
+  puts "invalid input. a denominator of 0 is not allowed"
+else
+  break if valid_number?(denominator)
+  puts "invalid input. only integers are allowed"
+end
+end
+result = numerator.to_i/denominator.to_i
+puts `#{numerator} / #{denominator} is #{result}`
+
