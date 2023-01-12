@@ -1,13 +1,8 @@
-def hello
-  'Hello'
+make = nil
+model = nil
+
+def car(make, model) 
+  puts make + " " + model
 end
 
-def world
-  'World'
-end
-
-def greet
-  hello + ' ' + world
-end 
-
-puts greet
+ car('Toyota', 'Corolla')
