@@ -1,8 +1,9 @@
-make = nil
-model = nil
+daylight = [true, false].sample
 
-def car(make, model) 
-   make + " " + model
-end
+def time_of_day(light)
+  puts "it's daytime" if light == true
+  puts "it's nighttime!" if light == false
 
- puts car('Toyota', 'Corolla')
+end 
+
+time_of_day(daylight)
