@@ -1,9 +1,10 @@
-daylight = [true, false].sample
+def dog
+  return name
+end
 
-def time_of_day(light)
-  puts "it's daytime" if light == true
-  puts "it's nighttime!" if light == false
+def cat(name)
+  return name
+end
 
-end 
-
-time_of_day(daylight)
+puts "The dog's name is #{dog('Spot')}."
+puts "The cat's name is #{cat}."
