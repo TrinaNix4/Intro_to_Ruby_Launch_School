@@ -1,11 +1,13 @@
-
-
-def part_1
-   "hello"
+def hello
+  'Hello'
 end
 
-def part_2
-   "World"
+def world
+  'World'
 end
 
-puts "#{part_1} #{part_2}"
+def greet
+  hello + ' ' + world
+end 
+
+puts greet
