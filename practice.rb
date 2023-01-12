@@ -1,10 +1,11 @@
 
 
+def part_1
+   "hello"
+end
 
-def print_me
-  puts "i'm printing within the method"
+def part_2
+   "World"
+end
 
-end 
- 
-
-print_me
+puts "#{part_1} #{part_2}"
