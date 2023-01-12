@@ -1,21 +1,22 @@
 
 
-def add (num1, num2)
-   num1 +  num2 
 
 
+def name(array)
+  array.sample
 end
 
 
-def multiply(factor1, factor2)
-  factor1 * factor2
+def activity(activities)
+  activities.sample
+end
+
+def sentence(name, activity)
+  "#{name} went #{activity} today!"
 end
 
 
-puts multiply(add(2,2), add(5,4)) == 36
+names = ['Dave', 'Sally', 'George', 'Jessica']
+activities = ['walking', 'running', 'cycling']
 
-
-puts add(2, 2) == 4
-puts add(5, 4) == 9
-
-
+puts sentence(name(names), activity(activities))
