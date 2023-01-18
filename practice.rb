@@ -1,22 +1,5 @@
 
-
-
-
-def name(array)
-  array.sample
+def running_sum(nums)
+  sum = 0
+  nums.map { |num| sum += num }
 end
-
-
-def activity(activities)
-  activities.sample
-end
-
-def sentence(name, activity)
-  "#{name} went #{activity} today!"
-end
-
-
-names = ['Dave', 'Sally', 'George', 'Jessica']
-activities = ['walking', 'running', 'cycling']
-
-puts sentence(name(names), activity(activities))
