@@ -1,4 +1,3 @@
-sun = ["visible", "hidden"].sample
+boolean = false
 
-puts "the sun is so bright!" if sun == 'visible'
-puts "the cloud are blocking the sun!" unless sun == 'visible'
+boolean ? puts("i'm true") : puts("Im false")
