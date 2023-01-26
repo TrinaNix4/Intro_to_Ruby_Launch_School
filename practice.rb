@@ -1,6 +1,7 @@
-def meal
-  'Dinner'
-  puts 'Dinner'
-end
+def count_sheep
+  5.times do |sheep|
+    puts sheep 
+  end
 
-p meal
+end
+puts count_sheep
