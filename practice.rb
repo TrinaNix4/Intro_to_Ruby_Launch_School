@@ -1,6 +1,6 @@
 def meal
+  puts 'Dinner'
   return 'Breakfast'
-  'Dinner'
 end
 
 puts meal
