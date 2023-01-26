@@ -1,5 +1,6 @@
 def meal
-  'Evening'
+  return 'Breakfast'
+  'Dinner'
 end
 
 puts meal
