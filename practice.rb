@@ -1,3 +1,10 @@
-boolean = false
+stoplight = ['green', 'yellow', 'red'].sample
 
-boolean ? puts("i'm true") : puts("Im false")
+case stoplight
+when 'green'
+  puts 'go!'
+when 'yellow'
+  puts "slow down!"
+when 'red'
+  puts "stop!"
+end
