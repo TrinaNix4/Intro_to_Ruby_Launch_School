@@ -1,10 +1,8 @@
+number = rand(10)
 
-status = ['awake', 'tired'].sample
+if number == 5
+  puts '5 is a cool number'
+else
+  puts 'other numbers are cool too!'
+end
 
-alert = if status == 'awake'
-  puts "be productive!"
-  else
-   'go to sleep!'
-  end
-  
-  puts alert
