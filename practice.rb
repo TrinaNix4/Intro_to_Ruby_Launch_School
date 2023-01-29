@@ -1,4 +1,6 @@
+first_name = 'John'
+last_name = 'Doe'
 
-name = 'Elizabeth'
+full_name = "#{first_name}" + " " + "#{last_name}"
 
-puts "hello, #{name}"
+puts full_name
